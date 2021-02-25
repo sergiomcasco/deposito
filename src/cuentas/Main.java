@@ -1,14 +1,28 @@
 package cuentas;
+
+/**
+ * clase principal
+ * @author sergio
+ * @version 1.0
+ */
 public class Main {
 
+	/**
+	 * metodo principal
+	 * @param args argumentos pasados por linea de comandos
+	 */
     public static void main(String[] args) {
-        operativa_cuenta();
+        operativa_cuenta(0);
     }
 
-	private static void operativa_cuenta() {
+    /**
+     * realiz una operacion con las cuentas
+     * @param cantidad cantidad a operar
+     */
+	private static void operativa_cuenta(float cantidad) {
 		CCuenta miCuenta;
         double saldoActual;
-
+        
         miCuenta = new CCuenta("Antonio López","1000-2365-85-1230456789",2500,0);
         saldoActual = miCuenta.estado();
         System.out.println("El saldo actual es"+ saldoActual );
